@@ -438,7 +438,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
              .nav-footer{text-align: center; margin-top: auto;}
              .nav-footer > p > a {white-space: nowrap;}</style>
 </head>
-<body id="creating-cluster-with-aws-kms-key_rosa-hcp-create-a-rosa-hcp-cluster-in-a-shared-vpc-using-the-cli" class="book toc2 toc-left">
+<body id="rosa-hcp-planning-deployment-intro_rosa-hcp-plan-deployment" class="book toc2 toc-left">
 <div id="header">
 <h1>Red&#160;Hat OpenShift Services on AWS</h1>
 <div id="toc" class="toc2">
@@ -449,14 +449,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_discover.html">Discover</a>
 </li>
 <li><a href="_plan.html">Plan</a>
-</li>
-<li><a href="_install.html">Install</a>
 <ul class="sectlevel2">
-<li><a href="rosa-hcp-create-a-rosa-hcp-cluster-intro_rosa-hcp-create-a-rosa-hcp-cluster.html">Create a ROSA HCP Cluster</a>
-</li>
-<li><a href="rosa-hcp-create-a-rosa-hcp-cluster-in-a-shared-vpc-intro_rosa-hcp-create-a-rosa-hcp-cluster-in-a-shared-vpc.html">Create a ROSA HCP Cluster in a Shared VPC</a>
+<li><a href="rosa-hcp-planning-deployment-intro_rosa-hcp-plan-deployment.html"><span class="toc-current">Planning a ROSA with HCP deployment</span></a>
 </li>
 </ul>
+</li>
+<li><a href="_install.html">Install</a>
 </li>
 <li><a href="_upgrade.html">Upgrade</a>
 </li>
@@ -466,248 +464,67 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div id="content">
-<div class="sect4">
-<h5 id="creating-cluster-with-aws-kms-key_rosa-hcp-create-a-rosa-hcp-cluster-in-a-shared-vpc-using-the-cli">Creating a Red&#160;Hat OpenShift Services on AWS cluster using a custom AWS KMS key</h5>
+<div class="sect2">
+<h3 id="rosa-hcp-planning-deployment-intro_rosa-hcp-plan-deployment">Planning a ROSA with HCP deployment</h3>
 <div class="paragraph _abstract">
-<p>You can create a Red&#160;Hat OpenShift Services on AWS cluster with a customer-provided KMS key that is used to encrypt either node root volumes, the etcd database, or both. A different KMS key ARN can be provided for each option.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Red&#160;Hat OpenShift Services on AWS does not automatically configure the <code>default</code> storage class to encrypt persistent volumes with the customer-provided KMS key. You can configure this in-cluster after installation.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Create a custom AWS customer-managed KMS key by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ KMS_ARN=$(aws kms create-key --region $AWS_REGION --description 'Custom ROSA Encryption Key' --tags TagKey=red-hat,TagValue=true --query KeyMetadata.Arn --output text)</code></pre>
-</div>
+<p>Before you create a Red Hat OpenShift Service on AWS cluster, you must plan your deployment to ensure that your environment meets the requirements for a successful installation and ongoing operation.</p>
 </div>
 <div class="paragraph">
-<p>This command saves the Amazon Resource Name (ARN) output of this custom key for further steps.</p>
+<p>Planning a ROSA with HCP deployment involves several key considerations:</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Customers must provide the <code>--tags TagKey=red-hat,TagValue=true</code> argument that is required for a customer KMS key.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Cluster architecture</strong>: Understanding the differences between ROSA with HCP and Red Hat OpenShift Service on AWS (classic architecture) architectures to determine which best fits your requirements.</p>
 </li>
 <li>
-<p>Verify the KMS key has been created by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ echo $KMS_ARN</code></pre>
-</div>
-</div>
+<p><strong>Network configuration</strong>: Ensuring you have adequate network capacity and proper placement of cluster resources, including CIDR range planning and network plugin selection.</p>
 </li>
 <li>
-<p>Set your AWS account ID to an environment variable.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ AWS_ACCOUNT_ID=&lt;aws_account_id&gt;</code></pre>
-</div>
-</div>
+<p><strong>Access control</strong>: Defining how users and applications will access the cluster through network policies and authentication mechanisms.</p>
 </li>
 <li>
-<p>Add the ARN for the account-wide installer role and operator roles that you created in the preceding step to the <code>Statement.Principal.AWS</code> section in the file. In the following example, the ARN for the default <code>ManagedOpenShift-HCP-ROSA-Installer-Role</code> role is added:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">{
-  "Version": "2012-10-17",
-  "Id": "key-rosa-policy-1",
-  "Statement": [
-  {
-              "Sid": "Enable IAM User Permissions",
-              "Effect": "Allow",
-              "Principal": {
-                  "AWS": "arn:aws:iam::${AWS_ACCOUNT_ID}:root"
-              },
-              "Action": "kms:*",
-              "Resource": "*"
-          },
-        {
-              "Sid": "Installer Permissions",
-              "Effect": "Allow",
-              "Principal": {
-                  "AWS": "arn:aws:iam::${AWS_ACCOUNT_ID}:role/ManagedOpenShift-HCP-ROSA-Installer-Role"
-              },
-              "Action": [
-                  "kms:CreateGrant",
-                  "kms:DescribeKey",
-                  "kms:GenerateDataKeyWithoutPlaintext"
-              ],
-              "Resource": "*"
-          },
-          {
-              "Sid": "ROSA KubeControllerManager Permissions",
-              "Effect": "Allow",
-              "Principal": {
-                  "AWS": "arn:aws:iam::${AWS_ACCOUNT_ID}:role/&lt;operator_role_prefix&gt;-kube-system-kube-controller-manager"
-
-              },
-              "Action": "kms:DescribeKey",
-              "Resource": "*"
-          },
-          {
-              "Sid": "ROSA KMS Provider Permissions",
-              "Effect": "Allow",
-              "Principal": {
-                  "AWS": "arn:aws:iam::${AWS_ACCOUNT_ID}:role/&lt;operator_role_prefix&gt;-kube-system-kms-provider"
-              },
-              "Action": [
-                  "kms:Encrypt",
-                  "kms:Decrypt",
-                  "kms:DescribeKey"
-              ],
-              "Resource": "*"
-          },
-          {
-              "Sid": "ROSA NodeManager Permissions",
-              "Effect": "Allow",
-              "Principal": {
-                  "AWS": "arn:aws:iam::${AWS_ACCOUNT_ID}:role/&lt;operator_role_prefix&gt;-kube-system-capa-controller-manager"
-              },
-              "Action": [
-                  "kms:DescribeKey",
-                  "kms:GenerateDataKeyWithoutPlaintext",
-                  "kms:CreateGrant"
-              ],
-              "Resource": "*"
-          }
-      ]
-  }</code></pre>
-</div>
-</div>
+<p><strong>Outbound connectivity</strong>: Planning for firewall prerequisites and external service access required for cluster operations.</p>
 </li>
 <li>
-<p>Confirm the details of the policy file created by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ cat rosa-key-policy.json</code></pre>
-</div>
-</div>
+<p><strong>Authentication model</strong>: Selecting the appropriate identity provider configuration for your cluster users.</p>
 </li>
 <li>
-<p>Apply the newly generated key policy to the custom KMS key by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ aws kms put-key-policy --key-id $KMS_ARN \
---policy file://rosa-key-policy.json \
---policy-name default</code></pre>
-</div>
-</div>
+<p><strong>Encryption strategy</strong>: Determining your approach to cluster data encryption and compliance requirements.</p>
 </li>
 <li>
-<p>Create the cluster by running the following command:</p>
-<div class="openblock">
-<div class="content">
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If your cluster name is longer than 15 characters, it will contain an autogenerated domain prefix as a sub-domain for your provisioned cluster on <code>*.openshiftapps.com</code>.</p>
+<p><strong>Compute resources</strong>: Sizing your cluster based on tested maximums and application requirements.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>To customize the subdomain, use the <code>--domain-prefix</code> flag. The domain prefix cannot be longer than 15 characters, must be unique, and cannot be changed after cluster creation.</p>
+<p>Proper planning in these areas helps ensure a smooth deployment and reduces the risk of configuration issues after cluster creation.</p>
 </div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ rosa create cluster --cluster-name &lt;cluster_name&gt; \
---subnet-ids &lt;private_subnet_id&gt;,&lt;public_subnet_id&gt; \
---sts \
---mode auto \
---machine-cidr 10.0.0.0/16 \
---compute-machine-type m5.xlarge \
---hosted-cp \
---region &lt;aws_region&gt; \
---oidc-config-id $OIDC_ID \
---kms-key-arn $KMS_ARN \
---etcd-encryption-kms-arn $KMS_ARN \
---operator-roles-prefix $OPERATOR_ROLES_PREFIX</code></pre>
-</div>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>--kms-key-arn</code></dt>
-<dd>
-<p>This KMS key ARN is used to encrypt all worker node root volumes. It is not required if only etcd database encryption is needed.</p>
-</dd>
-<dt class="hdlist1"><code>--etcd-encryption-kms-arn</code></dt>
-<dd>
-<p>This KMS key ARN is used to encrypt the etcd database. The etcd database is always encrypted by default with an AES cipher block, but can be encrypted instead with a KMS key. It is not required if only node root volume encryption is needed.</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<div class="title">Verification</div>
-<p>You can verify that your KMS key works by using <a href="https://console.redhat.com/openshift">OpenShift Cluster Manager</a>.</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
+<div class="ulist">
+<ul>
 <li>
-<p>Navigate to <a href="https://console.redhat.com/openshift">OpenShift Cluster Manager</a> and select <strong>Instances</strong>.</p>
+<p><a href="rosa-hcp-classic-comparison_rosa-hcp-plan-choose-cluster-architecture.html">Comparing Red Hat OpenShift Service on AWS and Red Hat OpenShift Service on AWS (classic architecture)</a></p>
 </li>
 <li>
-<p>Select your instance.</p>
+<p><a href="con_about-managed-networking_rosa-hcp-plan-network-capacity-placement.html">About networking for managed clusters</a></p>
 </li>
 <li>
-<p>Click the <strong>Storage</strong> tab.</p>
+<p><a href="nw-anp-differences-networkpolicy_rosa-hcp-plan-define-user-app-access.html">Key differences between AdminNetworkPolicy and NetworkPolicy custom resources</a></p>
 </li>
 <li>
-<p>Copy the <strong>KMS key ID</strong>.</p>
+<p><a href="rosa-hcp-firewall-prerequisites_rosa-hcp-plan-outbound-connectivity.html">Firewall prerequisites for Red&#160;Hat OpenShift Services on AWS</a></p>
 </li>
 <li>
-<p>Search and select <strong>Key Management Service</strong>.</p>
+<p><a href="oauth-server-overview_rosa-hcp-plan-choose-authentication-model.html">Red&#160;Hat OpenShift Services on AWS OAuth server</a></p>
 </li>
 <li>
-<p>Enter your copied <em>KMS key ID</em> in the <strong>Filter</strong> field.</p>
+<p><a href="planning-environment-cluster-maximums_rosa-hcp-plan-compute-resources.html">Planning your environment based on tested cluster maximums</a></p>
 </li>
-</ol>
+</ul>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="rosa-operator-config_rosa-hcp-create-a-rosa-hcp-cluster-in-a-shared-vpc-using-the-cli.html">Creating Operator roles and policies</a> | ↑ Up: <a href="rosa-hcp-create-a-rosa-hcp-cluster-in-a-shared-vpc-using-the-cli-intro_rosa-hcp-create-a-rosa-hcp-cluster-in-a-shared-vpc-using-the-cli.html">Create a ROSA HCP Cluster in a Shared VPC using the CLI</a> | ⌂ Home: <a href="navigation.html">Red&#160;Hat OpenShift Services on AWS</a> | Next: <a href="aws-encryption-key_rosa-hcp-create-a-rosa-hcp-cluster-in-a-shared-vpc-using-the-cli.html">Create an AWS KMS encryption key</a> →</p>
+<p>↑ Up: <a href="_plan.html">Plan</a> | ⌂ Home: <a href="navigation.html">Red&#160;Hat OpenShift Services on AWS</a> | Next: <a href="rosa-hcp-classic-comparison_rosa-hcp-plan-choose-cluster-architecture.html">Comparing Red Hat OpenShift Service on AWS and Red Hat OpenShift Service on AWS (classic architecture)</a> →</p>
 </div>
 </div>
 <div id="footer">
