@@ -530,8 +530,48 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 })();
 </script>
 <!-- navmap-left-nav-toggle-end -->
+<!-- navmap-right-toc-start -->
+<style>
+  body.navmap-has-right-toc { padding-right: 18em; }
+  #navmap-right-toc {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 16em;
+    height: 100%;
+    overflow: auto;
+    padding: 1.25em 1em;
+    background: #f8f8f7;
+    border-left: 1px solid #e7e7e9;
+    z-index: 1000;
+    font-family: "Open Sans", "DejaVu Sans", sans-serif;
+    font-size: .9em;
+  }
+  #navmap-right-toc h2 { margin-top: 0; font-size: 1.1em; }
+  #navmap-right-toc ul { list-style: none; margin: 0; padding: 0; }
+  #navmap-right-toc li { line-height: 1.35; margin: .4em 0; }
+  #navmap-right-toc li.level-3 { padding-left: 1em; }
+  #navmap-right-toc li.level-4 { padding-left: 2em; }
+  #navmap-right-toc li.level-5,
+  #navmap-right-toc li.level-6 { padding-left: 3em; }
+  #navmap-right-toc a { text-decoration: none; }
+  @media screen and (max-width: 1023px) {
+    body.navmap-has-right-toc { padding-right: 0; }
+    #navmap-right-toc {
+      position: static;
+      width: auto;
+      height: auto;
+      margin: 1em;
+      border: 1px solid #e7e7e9;
+      border-radius: 4px;
+    }
+  }
+
+
+</style>
+<!-- navmap-right-toc-end -->
 </head>
-<body id="choose-the-cluster-networking-plugin-intro_choose-the-cluster-networking-plugin" class="book toc2 toc-left">
+<body id="choose-the-cluster-networking-plugin-intro_choose-the-cluster-networking-plugin" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red&#160;Hat OpenShift Services on AWS</h1>
 <div id="toc" class="toc2">
@@ -656,11 +696,104 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#rosa-clusters-without-cni-plugin_choose-the-cluster-networking-plugin">Red Hat OpenShift Service on AWS clusters without a CNI plugin</a></li><li class="level-4"><a href="#about-ovn-kubernetes-network-plugin_choose-the-cluster-networking-plugin">About the OVN-Kubernetes network plugin</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="choose-the-cluster-networking-plugin-intro_choose-the-cluster-networking-plugin">Choose the cluster networking plugin</h3>
 <div class="paragraph _abstract">
 <p>Select the appropriate network plugin for your Red&#160;Hat OpenShift Service on AWS cluster, including options for clusters without a CNI plugin or with the OVN-Kubernetes network plugin.</p>
+</div>
+<div class="sect3">
+<h4 id="rosa-clusters-without-cni-plugin_choose-the-cluster-networking-plugin">Red Hat OpenShift Service on AWS clusters without a CNI plugin</h4>
+<div class="paragraph _abstract">
+<p>You can create a Red&#160;Hat OpenShift Services on AWS cluster without a Container Network Interface (CNI) plugin so that you can install a third-party CNI plugin that meets your specific networking requirements. After cluster creation, you install your chosen CNI plugin to provide pod networking.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For customers who choose to use their own CNI, the responsibility of CNI plugin support belongs to the customer in coordination with their chosen CNI vendor.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The default plugin for Red&#160;Hat OpenShift Services on AWS is the OVN-Kubernetes network plugin. This plugin is the only Red Hat supported CNI plugin for Red&#160;Hat OpenShift Services on AWS.</p>
+</div>
+<div class="paragraph">
+<p>If you use your own CNI for Red&#160;Hat OpenShift Services on AWS clusters, you must obtain commercial support from the plugin vendor before creating your clusters. Red&#160;Hat cannot assist with CNI-related issues, such as pod-to-pod traffic, but continues to provide support for all non-CNI issues. To receive CNI-related support from Red&#160;Hat, install the cluster with the default OVN-Kubernetes network plugin.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="about-ovn-kubernetes-network-plugin_choose-the-cluster-networking-plugin">About the OVN-Kubernetes network plugin</h4>
+<div class="paragraph _abstract">
+<p>The Red&#160;Hat OpenShift Services on AWS cluster uses a virtualized network for pod and service networks. The OVN-Kubernetes network plugin is the default provider that implements this virtualized overlay network by transforming configurations into OpenFlow rules to enable advanced routing and security features.</p>
+</div>
+<div class="paragraph">
+<p>Part of Red Hat OpenShift Networking, the OVN-Kubernetes network plugin is the default network provider for Red&#160;Hat OpenShift Services on AWS. OVN-Kubernetes is based on Open Virtual Network (OVN) and provides an overlay-based networking implementation. A cluster that uses the OVN-Kubernetes plugin also runs Open vSwitch (OVS) on each node. OVN configures OVS on each node to implement the declared network configuration.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>OVN-Kubernetes is the default networking solution for Red&#160;Hat OpenShift Services on AWS and single-node OpenShift deployments.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>OVN-Kubernetes, which arose from the OVS project, uses many of the same constructs. For example, the plugin applies OpenFlow rules to direct packet routing through the network infrastructure.</p>
+</div>
+<div class="paragraph">
+<p>OVN-Kubernetes is a series of daemons for OVS that transform virtual network configurations into <code>OpenFlow</code> rules. <code>OpenFlow</code> is a protocol for communicating with network switches and routers, providing a means for remotely controlling the flow of network traffic on a network device. This means that network administrators can configure, manage, and monitor the flow of network traffic.</p>
+</div>
+<div class="paragraph">
+<p>OVN-Kubernetes provides more of the advanced functionality not available with <code>OpenFlow</code>. OVN supports distributed virtual routing, distributed logical switches, access control, Dynamic Host Configuration Protocol (DHCP), and DNS. OVN implements distributed virtual routing within logic flows that equate to open flows.</p>
+</div>
+<div class="paragraph">
+<p>OVN-Kubernetes runs a daemon on each node. There are daemon sets for the databases and for the OVN controller that run on every node. The OVN controller programs the Open vSwitch daemon on the nodes to support the following network provider features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Egress IPs</p>
+</li>
+<li>
+<p>Firewalls</p>
+</li>
+<li>
+<p>Hardware offloading</p>
+</li>
+<li>
+<p>Hybrid networking</p>
+</li>
+<li>
+<p>Internet Protocol Security (IPsec) encryption</p>
+</li>
+<li>
+<p>IPv6</p>
+</li>
+<li>
+<p>Multicast</p>
+</li>
+<li>
+<p>Network policy and network policy logs</p>
+</li>
+<li>
+<p>Routers</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <div class="paragraph nav-footer">
