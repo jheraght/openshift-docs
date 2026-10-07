@@ -693,10 +693,45 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
+<li><button class="toc-toggle" type="button" data-toc-key="_administer.html">▶</button><a href="_administer.html">Administer</a>
+
+<ul class="sectlevel2">
+<li><a href="adjust-how-many-processes-your-workloads-can-run-intro_rosa-hcp-adjust-how-many-processes-your-workloads-can-run.html">Adjust how many processes your workloads can run</a>
+</li>
+<li><a href="understand-compute-capacity-intro_rosa-hcp-understand-compute-capacity.html">Understand compute capacity</a>
+</li>
+<li><a href="rosa-hcp-manage-compute-capacity-manually_rosa-hcp-manage-compute-capacity-manually.html">Manage compute capacity manually</a>
+</li>
+<li><a href="provision-compute-capacity-automatically-based-on-workload-demand-intro_rosa-hcp-provision-compute-capacity-automatically-based-on-workload-demand.html">Provision compute capacity automatically based on workload demand</a>
+</li>
+</ul>
+</li>
+<li><button class="toc-toggle" type="button" data-toc-key="_optimize.html">▶</button><a href="_optimize.html">Optimize</a>
+
+<ul class="sectlevel2">
+<li><a href="optimize-cluster-capacity-to-match-workload-demands-intro_rosa-hcp-optimize-cluster-capacity-to-match-workload-demands.html">Optimize cluster capacity to match workload demands</a>
+</li>
+<li><a href="optimize-node-performance-intro_rosa-hcp-optimize-node-performance.html">Optimize node performance</a>
+</li>
+<li><a href="keep-workloads-running-smoothly-during-spot-interruptions-intro_rosa-hcp-keep-workloads-running-smoothly-during-spot-interruptions.html">Keep workloads running smoothly during spot interruptions</a>
+</li>
+</ul>
+</li>
+<li><button class="toc-toggle" type="button" data-toc-key="_troubleshoot.html">▶</button><a href="_troubleshoot.html">Troubleshoot</a>
+
+<ul class="sectlevel2">
+<li><a href="rosa-hcp-troubleshoot-cluster-infrastructure-issues_rosa-hcp-troubleshoot-cluster-infrastructure-issues.html">Troubleshoot cluster infrastructure issues</a>
+</li>
+<li><a href="rosa-hcp-troubleshoot-component-and-workload-issues_rosa-hcp-troubleshoot-component-and-workload-issues.html">Troubleshoot component and workload issues</a>
+</li>
+<li><a href="rosa-hcp-troubleshoot-rosa-access-and-deployment-issues_rosa-hcp-troubleshoot-rosa-access-and-deployment-issues.html">Troubleshoot ROSA access and deployment issues</a>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#rosa-hcp-classic-comparison_rosa-hcp-investigate-architecture-models">Comparing Red Hat OpenShift Service on AWS and Red Hat OpenShift Service on AWS (classic architecture)</a></li><li class="level-4"><a href="#rosa-hcp-architecture_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Services on AWS architecture</a></li><li class="level-5"><a href="#rosa-hcp-network-architecture_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Services on AWS architecture on public and private networks</a></li><li class="level-4"><a href="#rosa-classic-architecture_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Services on AWS</a></li><li class="level-5"><a href="#rosa-classic-architecture-networks_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Services on AWS on public and private networks</a></li><li class="level-4"><a href="#osd-aws-privatelink-architecture_rosa-hcp-investigate-architecture-models">AWS PrivateLink architecture</a></li><li class="level-5"><a href="#osd-aws-reference-architecture_rosa-hcp-investigate-architecture-models">AWS reference architectures</a></li><li class="level-4"><a href="#rosa-architecture-local-zones_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Services on AWS with Local Zones</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#rosa-hcp-classic-comparison_rosa-hcp-investigate-architecture-models">Compare Red Hat OpenShift Service on AWS and Red Hat OpenShift Service on AWS (classic architecture)</a></li><li class="level-4"><a href="#rosa-hcp-architecture_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Services on AWS architecture</a></li><li class="level-5"><a href="#rosa-hcp-network-architecture_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Services on AWS architecture on public and private networks</a></li><li class="level-4"><a href="#rosa-classic-architecture_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Services on AWS</a></li><li class="level-5"><a href="#rosa-classic-architecture-networks_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Services on AWS on public and private networks</a></li><li class="level-4"><a href="#osd-aws-privatelink-architecture_rosa-hcp-investigate-architecture-models">AWS PrivateLink architecture</a></li><li class="level-5"><a href="#osd-aws-reference-architecture_rosa-hcp-investigate-architecture-models">AWS reference architectures</a></li><li class="level-4"><a href="#rosa-architecture-local-zones_rosa-hcp-investigate-architecture-models">Red Hat OpenShift Services on AWS with Local Zones</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="rosa-hcp-investigate-architecture-models_rosa-hcp-investigate-architecture-models">Investigate architecture models</h3>
@@ -704,7 +739,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Red&#160;Hat OpenShift Services on AWS uses a hosted control plane architecture where the control plane is hosted in a Red&#160;Hat account and the worker nodes are deployed in the customer&#8217;s AWS account. Learn about the architecture models, comparisons, and deployment options.</p>
 </div>
 <div class="sect3">
-<h4 id="rosa-hcp-classic-comparison_rosa-hcp-investigate-architecture-models">Comparing Red Hat OpenShift Service on AWS and Red Hat OpenShift Service on AWS (classic architecture)</h4>
+<h4 id="rosa-hcp-classic-comparison_rosa-hcp-investigate-architecture-models">Compare Red Hat OpenShift Service on AWS and Red Hat OpenShift Service on AWS (classic architecture)</h4>
 <div class="paragraph _abstract">
 <p>Red Hat OpenShift Service on AWS and Red Hat OpenShift Service on AWS (classic architecture) differ in how they host the control plane, deploy infrastructure, and handle upgrades.</p>
 </div>
@@ -1199,7 +1234,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-05 11:46:39 +0100
+Last updated 2026-10-07 09:56:20 +0100
 </div>
 </div>
 </body>

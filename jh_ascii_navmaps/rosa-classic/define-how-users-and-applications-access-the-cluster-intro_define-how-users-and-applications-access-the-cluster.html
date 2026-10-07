@@ -707,15 +707,108 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
+<li><button class="toc-toggle" type="button" data-toc-key="_administer.html">▶</button><a href="_administer.html">Administer</a>
+
+<ul class="sectlevel2">
+<li><a href="adjust-how-many-processes-your-workloads-can-run-intro_rosa-classic-adjust-how-many-processes-your-workloads-can-run.html">Adjust how many processes your workloads can run</a>
+</li>
+<li><a href="manage-compute-capacity-intro_rosa-classic-manage-compute-capacity-for-your-cluster.html">Manage compute capacity for your cluster</a>
+</li>
+</ul>
+</li>
+<li><button class="toc-toggle" type="button" data-toc-key="_optimize.html">▶</button><a href="_optimize.html">Optimize</a>
+
+<ul class="sectlevel2">
+<li><a href="optimize-cluster-capacity-to-match-workload-demands-intro_rosa-classic-optimize-cluster-capacity-to-match-workload-demands.html">Optimize cluster capacity to match workload demands</a>
+</li>
+</ul>
+</li>
+<li><button class="toc-toggle" type="button" data-toc-key="_troubleshoot.html">▶</button><a href="_troubleshoot.html">Troubleshoot</a>
+
+<ul class="sectlevel2">
+<li><a href="rosa-classic-troubleshoot-cluster-infrastructure-issues_rosa-classic-troubleshoot-cluster-infrastructure-issues.html">Troubleshoot cluster infrastructure issues</a>
+</li>
+<li><a href="troubleshoot-component-and-workload-issues_rosa-classic-troubleshoot-component-and-workload-issues.html">Troubleshoot component and workload issues</a>
+</li>
+<li><a href="rosa-classic-troubleshoot-rosa-access-and-deployment-issues_rosa-classic-troubleshoot-rosa-access-and-deployment-issues.html">Troubleshoot ROSA access and deployment issues</a>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#nw-anp-differences-networkpolicy_define-how-users-and-applications-access-the-cluster">Key differences between AdminNetworkPolicy and NetworkPolicy custom resources</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#network-policies-and-their-scope_define-how-users-and-applications-access-the-cluster">Network policies and their scope</a></li><li class="level-4"><a href="#network-policy-evaluation-and-application_define-how-users-and-applications-access-the-cluster">How network policy is evaluated and applied</a></li><li class="level-4"><a href="#nw-anp-differences-networkpolicy_define-how-users-and-applications-access-the-cluster">Key differences between AdminNetworkPolicy and NetworkPolicy custom resources</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="define-how-users-and-applications-access-the-cluster-intro_define-how-users-and-applications-access-the-cluster">Define how users and applications access the cluster</h3>
 <div class="paragraph _abstract">
 <p>Define network access policies that control how users and applications access your Red&#160;Hat OpenShift Service on AWS cluster, including network policy configurations.</p>
+</div>
+<div class="sect3">
+<h4 id="network-policies-and-their-scope_define-how-users-and-applications-access-the-cluster">Network policies and their scope</h4>
+<div class="paragraph _abstract">
+<p>Network policy is defined using both cluster-scoped and namespace-scoped network policy APIs. By defining network policy across these different levels, you can create sophisticated network security configurations for your clusters, including full multi-tenant isolation.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Cluster-scoped network policy</dt>
+<dd>
+<p>Cluster and network administrators can use the AdminNetworkPolicy to define network policy at the cluster level. The AdminNetworkPolicy feature consists of two APIs: the <code>AdminNetworkPolicy</code> API and <code>BaselineAdminNetworkPolicy</code> API. These APIs are used to set rules that can be applied to the entire cluster, or delegated to the namespace-scoped <code>NetworkPolicy</code>.</p>
+<div class="paragraph">
+<p>Policies defined using the <code>AdminNetworkPolicy</code> API take precedence over all other policy types when set to "Allow" or "Deny". However, administrators can also use "Pass" to delegate responsibility for a given policy to the namespace-scoped <code>NetworkPolicy</code> to allow application developers and namespace tenants to control specific aspects of network security for their projects.</p>
+</div>
+<div class="paragraph">
+<p>Policies defined using the <code>BaselineAdminNetworkPolicy</code> API apply only when no other network policy overrides them. When you use the <code>AdminNetworkPolicy</code> API to delegate an aspect of network policy to the namespace-scoped <code>NetworkPolicy</code>, you should also define a sensible minimum restriction in the <code>BaselineAdminNetworkPolicy</code>. This ensures a baseline level of network security at the cluster level in case the <code>NetworkPolicy</code> for a namespace does not provide sufficient protection.</p>
+</div>
+</dd>
+<dt class="hdlist1">Namespace-scoped network policy</dt>
+<dd>
+<p>Application developers and namespace tenants can use the <code>NetworkPolicy</code> API to define network policy rules for a specific namespace. Rules in the <code>NetworkPolicy</code> for a namespace take precedence over cluster-wide rules configured using the BaselineAdminNetworkPolicy API, or for a cluster-wide rule that has been delegated or "passed" from the cluster-wide <code>AdminNetworkPolicy</code> API.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="network-policy-evaluation-and-application_define-how-users-and-applications-access-the-cluster">How network policy is evaluated and applied</h4>
+<div class="paragraph _abstract">
+<p>When a network connection is established, the network provider (default: OVN-Kubernetes) checks the connection details against network policy rules to determine how to handle the connection.</p>
+</div>
+<div class="paragraph">
+<p>OVN-Kubernetes evaluates connections against network policy objects in the following order:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Check for matches in the AdminNetworkPolicy tier.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>If a connection matches an <code>Allow</code> or <code>Deny</code> rule, follow that rule and stop evaluating.</p>
+</li>
+<li>
+<p>If a connection matches a <code>Pass</code> rule, move to the NetworkPolicy tier.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Check for matches in the NetworkPolicy tier.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>If a connection matches a rule, follow that rule and stop evaluating.</p>
+</li>
+<li>
+<p>If no match is found, move to the BaselineAdminNetworkPolicy tier.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Follow a matching rule in the BaselineAdminNetworkPolicy tier.</p>
+</li>
+</ol>
+</div>
 </div>
 <div class="sect3">
 <h4 id="nw-anp-differences-networkpolicy_define-how-users-and-applications-access-the-cluster">Key differences between AdminNetworkPolicy and NetworkPolicy custom resources</h4>
@@ -814,7 +907,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-05 11:46:39 +0100
+Last updated 2026-10-07 09:56:20 +0100
 </div>
 </div>
 </body>

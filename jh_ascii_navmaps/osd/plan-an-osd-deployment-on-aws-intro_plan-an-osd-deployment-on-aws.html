@@ -610,19 +610,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="osd-create-a-red-hat-openshift-dedicated-cluster-on-google-cloud-using-the-default-options_osd-create-a-red-hat-openshift-dedicated-cluster-on-google-cloud-using-the-default-options.html">Create an OpenShift Dedicated cluster on Google Cloud using the default options</a>
 </li>
-<li><a href="osd-configure-an-identity-provider_osd-configure-an-identity-provider.html">Configure an identity provider</a>
-</li>
-<li><a href="osd-grant-administrator-privileges-to-a-user_osd-grant-administrator-privileges-to-a-user.html">Grant administrator privileges to a user</a>
-</li>
-<li><a href="osd-access-your-cluster_osd-access-your-cluster.html">Access your cluster</a>
-</li>
-<li><a href="osd-deploy-an-application-from-the-developer-catalog_osd-deploy-an-application-from-the-developer-catalog.html">Deploy an application from the Developer Catalog</a>
-</li>
-<li><a href="scaling-cluster_osd-scale-your-cluster.html">Scale your cluster</a>
-</li>
-<li><a href="osd-revoke-user-access-and-admin-privileges_osd-revoke-user-access-and-admin-privileges.html">Revoke user access and admin privileges</a>
-</li>
-<li><a href="osd-clean-up-your-resources_osd-clean-up-your-resources.html">Clean up your resources</a>
+<li><a href="osd-manage-a-red-hat-openshift-dedicated-on-google-cloud-cluster_osd-manage-a-red-hat-openshift-dedicated-on-google-cloud-cluster.html">Manage an OpenShift Dedicated on Google Cloud cluster</a>
 </li>
 <li><a href="osd-red-hat-openshift-cluster-manager-overview_osd-red-hat-openshift-cluster-manager-overview.html">Red Hat OpenShift Cluster Manager overview</a>
 </li>
@@ -655,10 +643,33 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
+<li><button class="toc-toggle" type="button" data-toc-key="_administer.html">▶</button><a href="_administer.html">Administer</a>
+
+<ul class="sectlevel2">
+<li><a href="manage-compute-capacity-intro_osd-manage-compute-capacity-for-your-cluster.html">Manage compute capacity for your cluster</a>
+</li>
+</ul>
+</li>
+<li><button class="toc-toggle" type="button" data-toc-key="_optimize.html">▶</button><a href="_optimize.html">Optimize</a>
+
+<ul class="sectlevel2">
+<li><a href="optimize-cluster-capacity-to-match-workload-demands-intro_osd-optimize-cluster-capacity-to-match-workload-demands.html">Optimize cluster capacity to match workload demands</a>
+</li>
+</ul>
+</li>
+<li><button class="toc-toggle" type="button" data-toc-key="_troubleshoot.html">▶</button><a href="_troubleshoot.html">Troubleshoot</a>
+
+<ul class="sectlevel2">
+<li><a href="troubleshoot-component-and-workload-issues_osd-troubleshoot-component-and-workload-issues.html">Troubleshoot component and workload issues</a>
+</li>
+<li><a href="osd-troubleshoot-a-google-cloud-cluster-deployment_osd-troubleshoot-a-google-cloud-cluster-deployment.html">Troubleshooting an OpenShift Dedicated on Google Cloud cluster deployment</a>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#choose-the-subscription-model-aws-intro_choose-the-subscription-model-aws">Choose the subscription model</a></li><li class="level-5"><a href="#ccs-aws-understand_choose-the-subscription-model-aws">Understanding Customer Cloud Subscriptions on AWS</a></li><li class="level-5"><a href="#ccs-aws-customer-requirements_choose-the-subscription-model-aws">Requirements for Customer Cloud Subscription on AWS</a></li><li class="level-6"><a href="#ccs-requirements-account_choose-the-subscription-model-aws">Account</a></li><li class="level-6"><a href="#ccs-requirements-access_choose-the-subscription-model-aws">Access requirements</a></li><li class="level-6"><a href="#ccs-requirements-support_choose-the-subscription-model-aws">Support requirements</a></li><li class="level-6"><a href="#ccs-requirements-security_choose-the-subscription-model-aws">Security requirements</a></li><li class="level-4"><a href="#plan-network-capacity-and-placement-aws-intro_plan-network-capacity-and-placement-aws">Plan network capacity and placement</a></li><li class="level-5"><a href="#con_about-managed-networking_plan-network-capacity-and-placement-aws">About networking for managed clusters</a></li><li class="level-5"><a href="#machine-cidr-description_plan-network-capacity-and-placement-aws">Machine CIDR</a></li><li class="level-5"><a href="#service-cidr-description_plan-network-capacity-and-placement-aws">Service classless inter-domain routing (CIDR)</a></li><li class="level-5"><a href="#pod-cidr-description_plan-network-capacity-and-placement-aws">Pod classless inter-domain routing (CIDR)</a></li><li class="level-5"><a href="#host-prefix-description_plan-network-capacity-and-placement-aws">Host prefix</a></li><li class="level-6"><a href="#additional-resources_host-prefix-description_plan-network-capacity-and-placement-aws">Additional resources</a></li><li class="level-4"><a href="#define-how-users-and-applications-access-the-cluster-aws-intro_define-how-users-and-applications-access-the-cluster-aws">Define how users and applications access the cluster</a></li><li class="level-5"><a href="#nw-anp-differences-networkpolicy_define-how-users-and-applications-access-the-cluster-aws">Key differences between AdminNetworkPolicy and NetworkPolicy custom resources</a></li><li class="level-4"><a href="#plan-outbound-connectivity-aws-intro_plan-outbound-connectivity-aws">Plan outbound connectivity</a></li><li class="level-4"><a href="#choose-the-cluster-encryption-strategy-aws-intro_choose-the-cluster-encryption-strategy-aws">Choose the cluster encryption strategy</a></li><li class="level-4"><a href="#plan-compute-resources-aws-intro_plan-compute-resources-aws">Plan compute resources</a></li><li class="level-5"><a href="#rosa-nodes-machinepools-infrastructure_plan-compute-resources-aws">Machine pool infrastructure</a></li><li class="level-6"><a href="#rosa-nodes-machinepools-infrastructure-machines_plan-compute-resources-aws">Machines</a></li><li class="level-6"><a href="#rosa-nodes-machinepools-infrastructure-machine-sets_plan-compute-resources-aws">Machine sets</a></li><li class="level-6"><a href="#rosa-nodes-machinepools-infrastructure-machine-pools_plan-compute-resources-aws">Machine pools</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#choose-the-subscription-model-aws-intro_choose-the-subscription-model-aws">Choose the subscription model</a></li><li class="level-5"><a href="#overview-of-osd-cloud-deployment-options_choose-the-subscription-model-aws">Overview of the OpenShift Dedicated cloud deployment options</a></li><li class="level-6"><a href="#osd-deployment-option-ccs_choose-the-subscription-model-aws">Deploy clusters using the Customer Cloud Subscription (CCS) model</a></li><li class="level-6"><a href="#osd-deployment-option-red-hat-cloud-account_choose-the-subscription-model-aws">Deploy clusters in Red Hat cloud accounts</a></li><li class="level-5"><a href="#ccs-aws-customer-requirements_choose-the-subscription-model-aws">Requirements for Customer Cloud Subscription on AWS</a></li><li class="level-6"><a href="#ccs-requirements-account_choose-the-subscription-model-aws">Account</a></li><li class="level-6"><a href="#ccs-requirements-access_choose-the-subscription-model-aws">Access requirements</a></li><li class="level-6"><a href="#ccs-requirements-support_choose-the-subscription-model-aws">Support requirements</a></li><li class="level-6"><a href="#ccs-requirements-security_choose-the-subscription-model-aws">Security requirements</a></li><li class="level-4"><a href="#plan-network-capacity-and-placement-aws-intro_plan-network-capacity-and-placement-aws">Plan network capacity and placement</a></li><li class="level-5"><a href="#con_about-managed-networking_plan-network-capacity-and-placement-aws">About networking for managed clusters</a></li><li class="level-5"><a href="#machine-cidr-description_plan-network-capacity-and-placement-aws">Machine CIDR</a></li><li class="level-5"><a href="#service-cidr-description_plan-network-capacity-and-placement-aws">Service classless inter-domain routing (CIDR)</a></li><li class="level-5"><a href="#pod-cidr-description_plan-network-capacity-and-placement-aws">Pod classless inter-domain routing (CIDR)</a></li><li class="level-5"><a href="#host-prefix-description_plan-network-capacity-and-placement-aws">Host prefix</a></li><li class="level-6"><a href="#additional-resources_host-prefix-description_plan-network-capacity-and-placement-aws">Additional resources</a></li><li class="level-4"><a href="#define-how-users-and-applications-access-the-cluster-aws-intro_define-how-users-and-applications-access-the-cluster-aws">Define how users and applications access the cluster</a></li><li class="level-5"><a href="#network-policies-and-their-scope_define-how-users-and-applications-access-the-cluster-aws">Network policies and their scope</a></li><li class="level-5"><a href="#network-policy-evaluation-and-application_define-how-users-and-applications-access-the-cluster-aws">How network policy is evaluated and applied</a></li><li class="level-5"><a href="#nw-anp-differences-networkpolicy_define-how-users-and-applications-access-the-cluster-aws">Key differences between AdminNetworkPolicy and NetworkPolicy custom resources</a></li><li class="level-4"><a href="#plan-outbound-connectivity-aws-intro_plan-outbound-connectivity-aws">Plan outbound connectivity</a></li><li class="level-4"><a href="#choose-the-cluster-encryption-strategy-aws-intro_choose-the-cluster-encryption-strategy-aws">Choose the cluster encryption strategy</a></li><li class="level-4"><a href="#plan-compute-resources-aws-intro_plan-compute-resources-aws">Plan compute resources</a></li><li class="level-5"><a href="#rosa-nodes-machinepools-infrastructure_plan-compute-resources-aws">Machine pool infrastructure</a></li><li class="level-6"><a href="#rosa-nodes-machinepools-infrastructure-machines_plan-compute-resources-aws">Machines</a></li><li class="level-6"><a href="#rosa-nodes-machinepools-infrastructure-machine-sets_plan-compute-resources-aws">Machine sets</a></li><li class="level-6"><a href="#rosa-nodes-machinepools-infrastructure-machine-pools_plan-compute-resources-aws">Machine pools</a></li><li class="level-5"><a href="#tested-cluster-maximums-sd_plan-compute-resources-aws">Cluster maximums</a></li><li class="level-5"><a href="#planning-cluster-maximums-environment-sd_plan-compute-resources-aws">OpenShift Dedicated testing environment and configuration</a></li><li class="level-5"><a href="#control-plane-and-infra-node-sizing-and-scaling-sd_plan-compute-resources-aws">Control plane and infrastructure node sizing and scaling</a></li><li class="level-6"><a href="#node-sizing-during-installation_plan-compute-resources-aws">Node sizing during installation</a></li><li class="level-6"><a href="#node-scaling-after-installation_plan-compute-resources-aws">Node scaling after installation</a></li><li class="level-6"><a href="#sizing-considerations-for-larger-clusters_plan-compute-resources-aws">Sizing considerations for larger clusters</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="plan-an-osd-deployment-on-aws-intro_plan-an-osd-deployment-on-aws">Plan an OSD deployment on AWS</h3>
@@ -671,18 +682,36 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="choose-the-subscription-model-aws-intro_choose-the-subscription-model-aws">Choose the subscription model</h4>
 <div class="paragraph _abstract">
-<p>Select the appropriate Customer Cloud Subscription (CCS) model for your OpenShift Dedicated deployment on Amazon Web Services to align with your organization&#8217;s billing, operational, and compliance requirements.</p>
+<p>You can install OpenShift Dedicated on Amazon Web Services (AWS) using a cloud account that you own or using a cloud account that is owned by Red Hat. Select the appropriate subscription model for your OpenShift Dedicated deployment on AWS to align with your organization&#8217;s billing, operational, and compliance requirements.</p>
 </div>
 <div class="sect4">
-<h5 id="ccs-aws-understand_choose-the-subscription-model-aws">Understanding Customer Cloud Subscriptions on AWS</h5>
+<h5 id="overview-of-osd-cloud-deployment-options_choose-the-subscription-model-aws">Overview of the OpenShift Dedicated cloud deployment options</h5>
 <div class="paragraph _abstract">
-<p>To deploy OpenShift Dedicated into your existing Amazon Web Services (AWS) account using the Customer Cloud Subscription (CCS) model, Red&#160;Hat requires several prerequisites be met.</p>
+<p>OpenShift Dedicated offers OpenShift Container Platform clusters as a managed service on Amazon Web Services (AWS) or Google Cloud.</p>
 </div>
 <div class="paragraph">
-<p>Red&#160;Hat recommends the usage of an AWS Organization to manage multiple AWS accounts. The AWS Organization managed by you, hosts multiple AWS accounts. There is a root account in the organization that all accounts will refer to in the account hierarchy.</p>
+<p>Through the Customer Cloud Subscription (CCS) model, you can deploy clusters in an existing AWS or Google Cloud cloud account that you own.</p>
 </div>
 <div class="paragraph">
-<p>It is recommended for the OpenShift Dedicated cluster using a CCS model to be hosted in an AWS account within an AWS Organizational Unit. A service control policy (SCP) is created and applied to the AWS Organizational Unit that manages what services the AWS sub-accounts are permitted to access. The SCP applies only to available permissions within a single AWS account for all AWS sub-accounts within the Organizational Unit. It is also possible to apply a SCP to a single AWS account. All other accounts in your AWS Organization are managed in your preferred manner. Red&#160;Hat Site Reliability Engineers (SRE) will not have any control over SCPs within the AWS Organization.</p>
+<p>Alternatively, you can install OpenShift Dedicated in a cloud account that is owned by Red&#160;Hat.</p>
+</div>
+<div class="sect5">
+<h6 id="osd-deployment-option-ccs_choose-the-subscription-model-aws">Deploy clusters using the Customer Cloud Subscription (CCS) model</h6>
+<div class="paragraph">
+<p>With the Customer Cloud Subscription (CCS) model you can deploy Red&#160;Hat managed OpenShift Dedicated clusters in an existing Amazon Web Services (AWS) or Google Cloud account that you own. Red&#160;Hat requires customers to meet several prerequisites to provide this service, and this service is supported by Red&#160;Hat Site Reliability Engineers (SRE).</p>
+</div>
+<div class="paragraph">
+<p>In the CCS model, the customer pays the cloud infrastructure provider directly for cloud costs, and the cloud infrastructure account is part of an organization owned by the customer, with specific access granted to Red&#160;Hat. In this model, the customer pays Red&#160;Hat for the CCS subscription and pays the cloud provider for the cloud costs.</p>
+</div>
+<div class="paragraph">
+<p>By using the CCS model, you can use the services that are provided by your cloud provider, in addition to the services provided by Red&#160;Hat.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="osd-deployment-option-red-hat-cloud-account_choose-the-subscription-model-aws">Deploy clusters in Red&#160;Hat cloud accounts</h6>
+<div class="paragraph">
+<p>As an alternative to the CCS model, you can deploy OpenShift Dedicated clusters in AWS or Google Cloud cloud accounts that are owned by Red&#160;Hat. With this model, Red&#160;Hat is responsible for the cloud account and the cloud infrastructure costs are paid directly by Red&#160;Hat. The customer only pays the Red&#160;Hat subscription costs.</p>
+</div>
 </div>
 </div>
 <div class="sect4">
@@ -963,6 +992,72 @@ The range must be large enough to accommodate your workload. The address block m
 <p>Define network access policies that control how users and applications access your OpenShift Dedicated cluster on Amazon Web Services, including network policy configurations.</p>
 </div>
 <div class="sect4">
+<h5 id="network-policies-and-their-scope_define-how-users-and-applications-access-the-cluster-aws">Network policies and their scope</h5>
+<div class="paragraph _abstract">
+<p>Network policy is defined using both cluster-scoped and namespace-scoped network policy APIs. By defining network policy across these different levels, you can create sophisticated network security configurations for your clusters, including full multi-tenant isolation.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Cluster-scoped network policy</dt>
+<dd>
+<p>Cluster and network administrators can use the AdminNetworkPolicy to define network policy at the cluster level. The AdminNetworkPolicy feature consists of two APIs: the <code>AdminNetworkPolicy</code> API and <code>BaselineAdminNetworkPolicy</code> API. These APIs are used to set rules that can be applied to the entire cluster, or delegated to the namespace-scoped <code>NetworkPolicy</code>.</p>
+<div class="paragraph">
+<p>Policies defined using the <code>AdminNetworkPolicy</code> API take precedence over all other policy types when set to "Allow" or "Deny". However, administrators can also use "Pass" to delegate responsibility for a given policy to the namespace-scoped <code>NetworkPolicy</code> to allow application developers and namespace tenants to control specific aspects of network security for their projects.</p>
+</div>
+<div class="paragraph">
+<p>Policies defined using the <code>BaselineAdminNetworkPolicy</code> API apply only when no other network policy overrides them. When you use the <code>AdminNetworkPolicy</code> API to delegate an aspect of network policy to the namespace-scoped <code>NetworkPolicy</code>, you should also define a sensible minimum restriction in the <code>BaselineAdminNetworkPolicy</code>. This ensures a baseline level of network security at the cluster level in case the <code>NetworkPolicy</code> for a namespace does not provide sufficient protection.</p>
+</div>
+</dd>
+<dt class="hdlist1">Namespace-scoped network policy</dt>
+<dd>
+<p>Application developers and namespace tenants can use the <code>NetworkPolicy</code> API to define network policy rules for a specific namespace. Rules in the <code>NetworkPolicy</code> for a namespace take precedence over cluster-wide rules configured using the BaselineAdminNetworkPolicy API, or for a cluster-wide rule that has been delegated or "passed" from the cluster-wide <code>AdminNetworkPolicy</code> API.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect4">
+<h5 id="network-policy-evaluation-and-application_define-how-users-and-applications-access-the-cluster-aws">How network policy is evaluated and applied</h5>
+<div class="paragraph _abstract">
+<p>When a network connection is established, the network provider (default: OVN-Kubernetes) checks the connection details against network policy rules to determine how to handle the connection.</p>
+</div>
+<div class="paragraph">
+<p>OVN-Kubernetes evaluates connections against network policy objects in the following order:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Check for matches in the AdminNetworkPolicy tier.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>If a connection matches an <code>Allow</code> or <code>Deny</code> rule, follow that rule and stop evaluating.</p>
+</li>
+<li>
+<p>If a connection matches a <code>Pass</code> rule, move to the NetworkPolicy tier.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Check for matches in the NetworkPolicy tier.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>If a connection matches a rule, follow that rule and stop evaluating.</p>
+</li>
+<li>
+<p>If no match is found, move to the BaselineAdminNetworkPolicy tier.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Follow a matching rule in the BaselineAdminNetworkPolicy tier.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
 <h5 id="nw-anp-differences-networkpolicy_define-how-users-and-applications-access-the-cluster-aws">Key differences between AdminNetworkPolicy and NetworkPolicy custom resources</h5>
 <div class="paragraph _abstract">
 <p>To choose the right network policy API for your cluster or namespace in OpenShift Dedicated, you can compare <code>AdminNetworkPolicy</code> and <code>NetworkPolicy</code> CRs across scope, rule actions, precedence, and peer options.</p>
@@ -1114,6 +1209,565 @@ The range must be large enough to accommodate your workload. The address block m
 </div>
 </div>
 </div>
+<div class="sect4">
+<h5 id="tested-cluster-maximums-sd_plan-compute-resources-aws">Cluster maximums</h5>
+<div class="paragraph _abstract">
+<p>OpenShift Dedicated clusters are tested against specific object maximums. Adhering to these supported limits helps you successfully architect and deploy a scalable, reliable environment.</p>
+</div>
+<div class="paragraph">
+<p>These guidelines are based on a cluster of 249 compute (also known as worker) nodes in a multiple availability zone configuration. For smaller clusters, the maximums are lower.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 6. Tested cluster maximums</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Maximum type</th>
+<th class="tableblock halign-left valign-top">4.x tested maximum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of pods <sup>[1]</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25,000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of pods per node</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">250</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of pods per core</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">There is no default value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of namespaces <sup>[2]</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5,000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of pods per namespace <sup>[3]</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25,000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of services <sup>[4]</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10,000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of services per namespace</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5,000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of back ends per service</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5,000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of deployments per namespace <sup>[3]</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2,000</p></td>
+</tr>
+</tbody>
+</table>
+<div class="openblock">
+<div class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The pod count displayed here is the number of test pods. The actual number of pods depends on the memory, CPU, and storage requirements of the application.</p>
+</li>
+<li>
+<p>When there are a large number of active projects, etcd can suffer from poor performance if the keyspace grows excessively large and exceeds the space quota. Periodic maintenance of etcd, including defragmentation, is highly recommended to make etcd storage available.</p>
+</li>
+<li>
+<p>There are several control loops in the system that must iterate over all objects in a given namespace as a reaction to some changes in state. Having a large number of objects of a type, in a single namespace, can make those loops expensive and slow down processing the state changes. The limit assumes that the system has enough CPU, memory, and disk to satisfy the application requirements.</p>
+</li>
+<li>
+<p>Each service port and each service back end has a corresponding entry in <code>iptables</code>. The number of back ends of a given service impacts the size of the endpoints objects, which then impacts the size of data sent throughout the system.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="planning-cluster-maximums-environment-sd_plan-compute-resources-aws">OpenShift Dedicated testing environment and configuration</h5>
+<div class="paragraph _abstract">
+<p>The following OpenShift Dedicated environment and configuration settings were tested on the AWS cloud platform. Adhering to these cluster maximums ensures your environment is fully supported and optimized for scale.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">vCPU</th>
+<th class="tableblock halign-left valign-top">RAM(GiB)</th>
+<th class="tableblock halign-left valign-top">Disk type</th>
+<th class="tableblock halign-left valign-top">Disk size(GiB)/IOPS</th>
+<th class="tableblock halign-left valign-top">Count</th>
+<th class="tableblock halign-left valign-top">Region</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Control plane/etcd <sup>[1]</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">m5.4xlarge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">64</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gp3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">350 / 1,000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">us-west-2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Infrastructure nodes <sup>[2]</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">r5.2xlarge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">64</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gp3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">300 / 900</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">us-west-2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Workload <sup>[3]</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">m5.2xlarge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">32</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gp3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">350 / 900</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">us-west-2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Compute nodes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">m5.2xlarge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">32</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gp3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">350 / 900</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">102</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">us-west-2</p></td>
+</tr>
+</tbody>
+</table>
+<div class="openblock">
+<div class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>io1 disks are used for control plane/etcd nodes in all versions earlier than 4.10.</p>
+</li>
+<li>
+<p>Infrastructure nodes are used to host monitoring components because Prometheus can claim a large amount of memory, depending on usage patterns.</p>
+</li>
+<li>
+<p>Workload nodes are dedicated to run performance and scalability workload generators.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Larger cluster sizes and higher object counts might be reachable. However, the sizing of the infrastructure nodes limits the amount of memory that is available to Prometheus. When creating, modifying, or deleting objects, Prometheus stores the metrics in its memory for roughly 3 hours before persisting the metrics on disk. If the rate of creation, modification, or deletion of objects is too high, Prometheus can become overwhelmed and fail due to the lack of memory resources.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="control-plane-and-infra-node-sizing-and-scaling-sd_plan-compute-resources-aws">Control plane and infrastructure node sizing and scaling</h5>
+<div class="paragraph _abstract">
+<p>When you install
+an OpenShift Dedicated
+cluster, the sizing of the control plane and infrastructure nodes is automatically determined by the compute node count.</p>
+</div>
+<div class="paragraph">
+<p>To maintain cluster stability, the Red&#160;Hat Site Reliability Engineering (SRE) team automatically adjusts your control plane and infrastructure nodes whenever you change your compute node count.</p>
+</div>
+<div class="sect5">
+<h6 id="node-sizing-during-installation_plan-compute-resources-aws">Node sizing during installation</h6>
+<div class="paragraph">
+<p>During the installation process, the sizing of the control plane and infrastructure nodes is dynamically calculated. The sizing calculation is based on the number of compute nodes in a cluster.</p>
+</div>
+<div class="paragraph">
+<p>The following
+tables list
+the control plane and infrastructure node sizing that is applied during installation.</p>
+</div>
+<div class="paragraph">
+<p>AWS control plane and infrastructure node size:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Number of compute nodes</th>
+<th class="tableblock halign-left valign-top">Control plane size</th>
+<th class="tableblock halign-left valign-top">Infrastructure node size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 to 25</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">m5.2xlarge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">r5.xlarge</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26 to 100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">m5.4xlarge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">r5.2xlarge</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">101 to 249</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">m5.8xlarge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">r5.4xlarge</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Google Cloud control plane and infrastructure node size:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Number of compute nodes</th>
+<th class="tableblock halign-left valign-top">Control plane size</th>
+<th class="tableblock halign-left valign-top">Infrastructure node size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>1 to 25</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>custom-8-32768</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>custom-4-32768-ext</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>26 to 100</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>custom-16-65536</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>custom-8-65536-ext</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>101 to 249</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>custom-32-131072</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>custom-16-131072-ext</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Google Cloud control plane and infrastructure node size for clusters created on or after 21 June 2024:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Number of compute nodes</th>
+<th class="tableblock halign-left valign-top">Control plane size</th>
+<th class="tableblock halign-left valign-top">Infrastructure node size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>1 to 25</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>n2-standard-8</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>n2-highmem-4</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>26 to 100</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>n2-standard-16</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>n2-highmem-8</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>101 to 249</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>n2-standard-32</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>n2-highmem-16</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The maximum number of compute nodes on
+OpenShift Dedicated
+clusters version 4.14.14 and later is 249. For earlier versions, the limit is 180.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect5">
+<h6 id="node-scaling-after-installation_plan-compute-resources-aws">Node scaling after installation</h6>
+<div class="paragraph">
+<p>If you change the number of compute nodes after installation, the control plane and infrastructure nodes are scaled by the Red&#160;Hat Site Reliability Engineering (SRE) team as required. The nodes are scaled to maintain platform stability.</p>
+</div>
+<div class="paragraph">
+<p>Postinstallation scaling requirements for control plane and infrastructure nodes are assessed on a case-by-case basis. Node resource consumption and received alerts are taken into consideration.</p>
+</div>
+<div class="paragraph">
+<p><strong>Rules for control plane node resizing alerts</strong></p>
+</div>
+<div class="paragraph">
+<p>The resizing alert is triggered for the control plane nodes in a cluster when the following occurs:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Control plane nodes sustain over 66% usage on average in a cluster.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The maximum number of compute nodes on
+OpenShift Dedicated
+is 180.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Rules for infrastructure node resizing alerts</strong></p>
+</div>
+<div class="paragraph">
+<p>Resizing alerts are triggered for the infrastructure nodes in a cluster when it has high-sustained CPU or memory usage. This high-sustained usage status is:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Infrastructure nodes sustain over 50% usage on average in a cluster with a single availability zone using 2 infrastructure nodes.</p>
+</li>
+<li>
+<p>Infrastructure nodes sustain over 66% usage on average in a cluster with multiple availability zones using 3 infrastructure nodes.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The maximum number of compute nodes on
+OpenShift Dedicated
+cluster versions 4.14.14 and later is 249. For earlier versions, the limit is 180.</p>
+</div>
+<div class="paragraph">
+<p>The resizing alerts only appear after sustained periods of high usage. Short usage spikes, such as a node temporarily going down causing the other node to scale up, do not trigger these alerts.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The SRE team might scale the control plane and infrastructure nodes for additional reasons, for example to manage an increase in resource consumption on the nodes.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="sizing-considerations-for-larger-clusters_plan-compute-resources-aws">Sizing considerations for larger clusters</h6>
+<div class="paragraph">
+<p>For larger clusters, infrastructure node sizing can become a significant impacting factor to scalability. There are many factors that influence the stated thresholds, including the etcd version or storage data format.</p>
+</div>
+<div class="paragraph">
+<p>Exceeding these limits does not necessarily mean that the cluster will fail. In most cases, exceeding these numbers results in lower overall performance.</p>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph nav-footer">
@@ -1122,7 +1776,7 @@ The range must be large enough to accommodate your workload. The address block m
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-05 11:46:39 +0100
+Last updated 2026-10-07 09:56:20 +0100
 </div>
 </div>
 </body>
