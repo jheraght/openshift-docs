@@ -666,10 +666,25 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
+<li><button class="toc-toggle" type="button" data-toc-key="_configure.html">▶</button><a href="_configure.html">Configure</a>
+
+<ul class="sectlevel2">
+<li><a href="osd-configure-private-connections-for-aws_osd-configure-private-connections-for-aws.html">Configure private connections for AWS</a>
+</li>
+<li><a href="osd-configure-a-private-cluster_osd-configure-a-private-cluster.html">Configure a private cluster</a>
+</li>
+<li><a href="osd-tutorial-update-component-routes-with-custom-domains-and-tls-certificates_osd-tutorial-update-component-routes-with-custom-domains-and-tls-certificates.html">Tutorial: Update component routes with custom domains and TLS certificates</a>
+</li>
+<li><a href="osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall_osd-tutorial-limit-egress-with-google-cloud-next-generation-firewall.html">Tutorial: Limit egress with Google Cloud Next Generation Firewall</a>
+</li>
+<li><a href="osd-tutorial-retrofit-byo-firewall-rules-on-google-cloud_osd-tutorial-retrofit-byo-firewall-rules-on-google-cloud.html">Tutorial: Retrofit Bring Your Own (BYO) firewall rules for OpenShift Dedicated on Google Cloud</a>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#choose-the-subscription-model-gcp-intro_choose-the-subscription-model-gcp">Choose the subscription model</a></li><li class="level-5"><a href="#overview-of-osd-cloud-deployment-options_choose-the-subscription-model-gcp">Overview of the OpenShift Dedicated cloud deployment options</a></li><li class="level-6"><a href="#osd-deployment-option-ccs_choose-the-subscription-model-gcp">Deploy clusters using the Customer Cloud Subscription (CCS) model</a></li><li class="level-6"><a href="#osd-deployment-option-red-hat-cloud-account_choose-the-subscription-model-gcp">Deploy clusters in Red Hat cloud accounts</a></li><li class="level-5"><a href="#ccs-gcp-customer-requirements_choose-the-subscription-model-gcp">Requirements for Customer Cloud Subscription on Google Cloud</a></li><li class="level-6"><a href="#ccs-gcp-requirements-account_choose-the-subscription-model-gcp">Account</a></li><li class="level-6"><a href="#ccs-gcp-requirements-access_choose-the-subscription-model-gcp">Access requirements</a></li><li class="level-6"><a href="#ccs-gcp-requirements-support_choose-the-subscription-model-gcp">Support requirements</a></li><li class="level-6"><a href="#ccs-gcp-requirements-security_choose-the-subscription-model-gcp">Security requirements</a></li><li class="level-4"><a href="#plan-network-capacity-and-placement-gcp-intro_plan-network-capacity-and-placement-gcp">Plan network capacity and placement</a></li><li class="level-5"><a href="#con_about-managed-networking_plan-network-capacity-and-placement-gcp">About networking for managed clusters</a></li><li class="level-5"><a href="#machine-cidr-description_plan-network-capacity-and-placement-gcp">Machine CIDR</a></li><li class="level-5"><a href="#service-cidr-description_plan-network-capacity-and-placement-gcp">Service classless inter-domain routing (CIDR)</a></li><li class="level-5"><a href="#pod-cidr-description_plan-network-capacity-and-placement-gcp">Pod classless inter-domain routing (CIDR)</a></li><li class="level-5"><a href="#host-prefix-description_plan-network-capacity-and-placement-gcp">Host prefix</a></li><li class="level-6"><a href="#additional-resources_host-prefix-description_plan-network-capacity-and-placement-gcp">Additional resources</a></li><li class="level-4"><a href="#define-how-users-and-applications-access-the-cluster-gcp-intro_define-how-users-and-applications-access-the-cluster-gcp">Define how users and applications access the cluster</a></li><li class="level-5"><a href="#network-policies-and-their-scope_define-how-users-and-applications-access-the-cluster-gcp">Network policies and their scope</a></li><li class="level-5"><a href="#network-policy-evaluation-and-application_define-how-users-and-applications-access-the-cluster-gcp">How network policy is evaluated and applied</a></li><li class="level-5"><a href="#nw-anp-differences-networkpolicy_define-how-users-and-applications-access-the-cluster-gcp">Key differences between AdminNetworkPolicy and NetworkPolicy custom resources</a></li><li class="level-5"><a href="#osd-gcp-architecture_define-how-users-and-applications-access-the-cluster-gcp">Private OpenShift Dedicated on Google Cloud architecture on public and private networks</a></li><li class="level-5"><a href="#osd-understanding-private-service-connect_define-how-users-and-applications-access-the-cluster-gcp">Understand Private Service Connect</a></li><li class="level-6"><a href="#psc-architecture_define-how-users-and-applications-access-the-cluster-gcp">Private Service Connect architecture</a></li><li class="level-5"><a href="#osd-private-psc-architecture-model-gcp_define-how-users-and-applications-access-the-cluster-gcp">Private OpenShift Dedicated on Google Cloud with Private Service Connect architecture model</a></li><li class="level-5"><a href="#osd-private-architecture-model_define-how-users-and-applications-access-the-cluster-gcp">Private OpenShift Dedicated on Google Cloud without Private Service Connect architecture model</a></li><li class="level-5"><a href="#osd-public-architecture-model-gcp_define-how-users-and-applications-access-the-cluster-gcp">Public OpenShift Dedicated on Google Cloud architecture model</a></li><li class="level-4"><a href="#plan-outbound-connectivity-gcp-intro_plan-outbound-connectivity-gcp">Plan outbound connectivity</a></li><li class="level-4"><a href="#choose-the-cloud-authentication-model-gcp-intro_choose-the-cloud-authentication-model-gcp">Choose the cloud authentication model</a></li><li class="level-5"><a href="#workload-identity-federation-overview_choose-the-cloud-authentication-model-gcp">Workload Identity Federation overview</a></li><li class="level-5"><a href="#service-accounts-overview_choose-the-cloud-authentication-model-gcp">Service accounts overview</a></li><li class="level-4"><a href="#choose-the-cluster-encryption-strategy-gcp-intro_choose-the-cluster-encryption-strategy-gcp">Choose the cluster encryption strategy</a></li><li class="level-4"><a href="#plan-compute-resources-gcp-intro_plan-compute-resources-gcp">Plan compute resources</a></li><li class="level-5"><a href="#rosa-nodes-machinepools-infrastructure_plan-compute-resources-gcp">Machine pool infrastructure</a></li><li class="level-6"><a href="#rosa-nodes-machinepools-infrastructure-machines_plan-compute-resources-gcp">Machines</a></li><li class="level-6"><a href="#rosa-nodes-machinepools-infrastructure-machine-sets_plan-compute-resources-gcp">Machine sets</a></li><li class="level-6"><a href="#rosa-nodes-machinepools-infrastructure-machine-pools_plan-compute-resources-gcp">Machine pools</a></li><li class="level-5"><a href="#tested-cluster-maximums-sd_plan-compute-resources-gcp">Cluster maximums</a></li><li class="level-5"><a href="#control-plane-and-infra-node-sizing-and-scaling-sd_plan-compute-resources-gcp">Control plane and infrastructure node sizing and scaling</a></li><li class="level-6"><a href="#node-sizing-during-installation_plan-compute-resources-gcp">Node sizing during installation</a></li><li class="level-6"><a href="#node-scaling-after-installation_plan-compute-resources-gcp">Node scaling after installation</a></li><li class="level-6"><a href="#sizing-considerations-for-larger-clusters_plan-compute-resources-gcp">Sizing considerations for larger clusters</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#choose-the-subscription-model-gcp-intro_choose-the-subscription-model-gcp">Choose the subscription model</a></li><li class="level-5"><a href="#overview-of-osd-cloud-deployment-options_choose-the-subscription-model-gcp">Overview of the OpenShift Dedicated cloud deployment options</a></li><li class="level-6"><a href="#osd-deployment-option-ccs_choose-the-subscription-model-gcp">Deploy clusters using the Customer Cloud Subscription (CCS) model</a></li><li class="level-6"><a href="#osd-deployment-option-red-hat-cloud-account_choose-the-subscription-model-gcp">Deploy clusters in Red Hat cloud accounts</a></li><li class="level-5"><a href="#ccs-gcp-customer-requirements_choose-the-subscription-model-gcp">Requirements for Customer Cloud Subscription on Google Cloud</a></li><li class="level-6"><a href="#ccs-gcp-requirements-account_choose-the-subscription-model-gcp">Account</a></li><li class="level-6"><a href="#ccs-gcp-requirements-access_choose-the-subscription-model-gcp">Access requirements</a></li><li class="level-6"><a href="#ccs-gcp-requirements-support_choose-the-subscription-model-gcp">Support requirements</a></li><li class="level-6"><a href="#ccs-gcp-requirements-security_choose-the-subscription-model-gcp">Security requirements</a></li><li class="level-4"><a href="#plan-network-capacity-and-placement-gcp-intro_plan-network-capacity-and-placement-gcp">Plan network capacity and placement</a></li><li class="level-5"><a href="#machine-cidr-description_plan-network-capacity-and-placement-gcp">Machine CIDR</a></li><li class="level-5"><a href="#service-cidr-description_plan-network-capacity-and-placement-gcp">Service classless inter-domain routing (CIDR)</a></li><li class="level-5"><a href="#pod-cidr-description_plan-network-capacity-and-placement-gcp">Pod classless inter-domain routing (CIDR)</a></li><li class="level-5"><a href="#host-prefix-description_plan-network-capacity-and-placement-gcp">Host prefix</a></li><li class="level-6"><a href="#additional-resources_host-prefix-description_plan-network-capacity-and-placement-gcp">Additional resources</a></li><li class="level-4"><a href="#define-how-users-and-applications-access-the-cluster-gcp-intro_define-how-users-and-applications-access-the-cluster-gcp">Define how users and applications access the cluster</a></li><li class="level-5"><a href="#network-policies-and-their-scope_define-how-users-and-applications-access-the-cluster-gcp">Network policies and their scope</a></li><li class="level-5"><a href="#network-policy-evaluation-and-application_define-how-users-and-applications-access-the-cluster-gcp">How network policy is evaluated and applied</a></li><li class="level-5"><a href="#nw-anp-differences-networkpolicy_define-how-users-and-applications-access-the-cluster-gcp">Key differences between AdminNetworkPolicy and NetworkPolicy custom resources</a></li><li class="level-5"><a href="#osd-gcp-architecture_define-how-users-and-applications-access-the-cluster-gcp">Private OpenShift Dedicated on Google Cloud architecture on public and private networks</a></li><li class="level-5"><a href="#osd-understanding-private-service-connect_define-how-users-and-applications-access-the-cluster-gcp">Understand Private Service Connect</a></li><li class="level-6"><a href="#psc-architecture_define-how-users-and-applications-access-the-cluster-gcp">Private Service Connect architecture</a></li><li class="level-5"><a href="#osd-private-psc-architecture-model-gcp_define-how-users-and-applications-access-the-cluster-gcp">Private OpenShift Dedicated on Google Cloud with Private Service Connect architecture model</a></li><li class="level-5"><a href="#osd-private-architecture-model_define-how-users-and-applications-access-the-cluster-gcp">Private OpenShift Dedicated on Google Cloud without Private Service Connect architecture model</a></li><li class="level-5"><a href="#osd-public-architecture-model-gcp_define-how-users-and-applications-access-the-cluster-gcp">Public OpenShift Dedicated on Google Cloud architecture model</a></li><li class="level-4"><a href="#plan-outbound-connectivity-gcp-intro_plan-outbound-connectivity-gcp">Plan outbound connectivity</a></li><li class="level-4"><a href="#choose-the-cloud-authentication-model-gcp-intro_choose-the-cloud-authentication-model-gcp">Choose the cloud authentication model</a></li><li class="level-5"><a href="#workload-identity-federation-overview_choose-the-cloud-authentication-model-gcp">Workload Identity Federation overview</a></li><li class="level-5"><a href="#service-accounts-overview_choose-the-cloud-authentication-model-gcp">Service accounts overview</a></li><li class="level-4"><a href="#choose-the-cluster-encryption-strategy-gcp-intro_choose-the-cluster-encryption-strategy-gcp">Choose the cluster encryption strategy</a></li><li class="level-4"><a href="#plan-compute-resources-gcp-intro_plan-compute-resources-gcp">Plan compute resources</a></li><li class="level-5"><a href="#rosa-nodes-machinepools-infrastructure_plan-compute-resources-gcp">Machine pool infrastructure</a></li><li class="level-6"><a href="#rosa-nodes-machinepools-infrastructure-machines_plan-compute-resources-gcp">Machines</a></li><li class="level-6"><a href="#rosa-nodes-machinepools-infrastructure-machine-sets_plan-compute-resources-gcp">Machine sets</a></li><li class="level-6"><a href="#rosa-nodes-machinepools-infrastructure-machine-pools_plan-compute-resources-gcp">Machine pools</a></li><li class="level-5"><a href="#tested-cluster-maximums-sd_plan-compute-resources-gcp">Cluster maximums</a></li><li class="level-5"><a href="#control-plane-and-infra-node-sizing-and-scaling-sd_plan-compute-resources-gcp">Control plane and infrastructure node sizing and scaling</a></li><li class="level-6"><a href="#node-sizing-during-installation_plan-compute-resources-gcp">Node sizing during installation</a></li><li class="level-6"><a href="#node-scaling-after-installation_plan-compute-resources-gcp">Node scaling after installation</a></li><li class="level-6"><a href="#sizing-considerations-for-larger-clusters_plan-compute-resources-gcp">Sizing considerations for larger clusters</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="plan-an-osd-deployment-on-google-cloud-intro_plan-an-osd-deployment-on-google-cloud">Plan an OSD deployment on Google Cloud</h3>
@@ -852,52 +867,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h4 id="plan-network-capacity-and-placement-gcp-intro_plan-network-capacity-and-placement-gcp">Plan network capacity and placement</h4>
 <div class="paragraph _abstract">
 <p>Plan your network architecture for OpenShift Dedicated on Google Cloud by understanding networking capabilities, CIDR range requirements, and subnet configurations to ensure sufficient capacity and proper placement for your workloads.</p>
-</div>
-<div class="sect4">
-<h5 id="con_about-managed-networking_plan-network-capacity-and-placement-gcp">About networking for managed clusters</h5>
-<div class="paragraph _abstract">
-<p>To optimize network traffic management and security across hybrid clusters, configure Red Hat OpenShift Networking.</p>
-</div>
-<div class="paragraph">
-<p>The Red Hat OpenShift Networking ecosystem of networking capabilities integrates ingress, egress, load balancing, high-performance throughput, security, and inter- and intra-cluster traffic management. The Red Hat OpenShift Networking ecosystem also provides role-based observability tools to reduce its natural complexities.</p>
-</div>
-<div class="paragraph">
-<p>The following list details some of the most commonly used Red Hat OpenShift Networking features available on your cluster:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Cluster Network Operator for network plugin management.</p>
-</li>
-<li>
-<p>Primary cluster network provided by either of the following Container Network Interface (CNI) plugins:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>OVN-Kubernetes network plugin, which is the default CNI plugin.</p>
-</li>
-<li>
-<p>OpenShift SDN network plugin, which was deprecated in OpenShift 4.16 and removed in OpenShift 4.17.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Before upgrading OpenShift Dedicated clusters that are configured with the OpenShift SDN network plugin to version 4.17, you must migrate to the OVN-Kubernetes network plugin. For more information, see <em>Migrating from the OpenShift SDN network plugin to the OVN-Kubernetes network plugin</em>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
 </div>
 <div class="sect4">
 <h5 id="machine-cidr-description_plan-network-capacity-and-placement-gcp">Machine CIDR</h5>
@@ -1911,7 +1880,7 @@ cluster versions 4.14.14 and later is 249. For earlier versions, the limit is 18
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-07 09:56:20 +0100
+Last updated 2026-10-09 17:13:39 +0100
 </div>
 </div>
 </body>

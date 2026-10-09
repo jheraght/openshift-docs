@@ -530,48 +530,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 })();
 </script>
 <!-- navmap-left-nav-toggle-end -->
-<!-- navmap-right-toc-start -->
-<style>
-  body.navmap-has-right-toc { padding-right: 18em; }
-  #navmap-right-toc {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 16em;
-    height: 100%;
-    overflow: auto;
-    padding: 1.25em 1em;
-    background: #f8f8f7;
-    border-left: 1px solid #e7e7e9;
-    z-index: 1000;
-    font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    font-size: .9em;
-  }
-  #navmap-right-toc h2 { margin-top: 0; font-size: 1.1em; }
-  #navmap-right-toc ul { list-style: none; margin: 0; padding: 0; }
-  #navmap-right-toc li { line-height: 1.35; margin: .4em 0; }
-  #navmap-right-toc li.level-3 { padding-left: 1em; }
-  #navmap-right-toc li.level-4 { padding-left: 2em; }
-  #navmap-right-toc li.level-5,
-  #navmap-right-toc li.level-6 { padding-left: 3em; }
-  #navmap-right-toc a { text-decoration: none; }
-  @media screen and (max-width: 1023px) {
-    body.navmap-has-right-toc { padding-right: 0; }
-    #navmap-right-toc {
-      position: static;
-      width: auto;
-      height: auto;
-      margin: 1em;
-      border: 1px solid #e7e7e9;
-      border-radius: 4px;
-    }
-  }
-
-
-</style>
-<!-- navmap-right-toc-end -->
 </head>
-<body id="rosa-classic-tutorial-deploy-red-hat-openshift-on-aws-services-classic-architecture-with-a-custom_rosa-classic-tutorial-deploy-red-hat-openshift-on-aws-services-classic-architecture-with-a-custom" class="book toc2 toc-left navmap-has-right-toc">
+<body id="_configure" class="book toc2 toc-left">
 <div id="header">
 <h1>Red&#160;Hat OpenShift Services on AWS (classic architecture)</h1>
 <div id="toc" class="toc2">
@@ -609,6 +569,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><button class="toc-toggle" type="button" data-toc-key="_get_started.html">▶</button><a href="_get_started.html">Get Started</a>
+
 <ul class="sectlevel2">
 <li><a href="rosa-classic-create-a-default-red-hat-openshift-on-aws-classic-architecture-cluster_rosa-classic-create-a-default-red-hat-openshift-on-aws-classic-architecture-cluster.html">Create a default Red Hat OpenShift on AWS (Classic architecture) cluster</a>
 </li>
@@ -629,8 +590,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="rosa-classic-create-a-customized-red-hat-openshift-aws-classic-architecture-cluster-with-sts_rosa-classic-create-a-customized-red-hat-openshift-aws-classic-architecture-cluster-with-sts.html">Create a customized Red&#160;Hat OpenShift Services on AWS (classic architecture) cluster with STS</a>
 </li>
 <li><a href="rosa-classic-create-an-aws-privatelink-for-red-hat-openshift-aws-classic-architecture-cluster_rosa-classic-create-an-aws-privatelink-for-red-hat-openshift-aws-classic-architecture-cluster.html">Create an AWS PrivateLink for Red Hat OpenShift AWS (Classic Architecture) cluster</a>
-</li>
-<li><a href="rosa-classic-configure-a-shared-vpc-for-your-red-hat-openshift-aws-classic-architecture-cluster_rosa-classic-configure-a-shared-vpc-for-your-red-hat-openshift-aws-classic-architecture-cluster.html">Configure a shared VPC for your Red Hat OpenShift AWS (Classic Architecture) cluster</a>
 </li>
 <li><a href="rosa-classic-reference-interactive-cluster-creation-mode_rosa-classic-reference-interactive-cluster-creation-mode.html">Reference interactive cluster creation mode</a>
 </li>
@@ -654,13 +613,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="rosa-classic-command-quick-reference_rosa-classic-command-quick-reference.html">Command quick reference</a>
 </li>
-<li><a href="rosa-classic-tutorial-configure-microsoft-entra-id-as-your-cluster-identity-provider_rosa-classic-tutorial-configure-microsoft-entra-id-as-your-cluster-identity-provider.html">Tutorial: Configure Microsoft Entra ID as your cluster identity provider</a>
-</li>
 <li><a href="rosa-verify-permissions-sts-deployment-about-verification_rosa-classic-tutorial-verify-aws-permissions-before-an-sts-deployment.html">Permission verification for STS deployments</a>
-</li>
-<li><a href="rosa-classic-tutorial-deploy-red-hat-openshift-on-aws-services-classic-architecture-with-a-custom_rosa-classic-tutorial-deploy-red-hat-openshift-on-aws-services-classic-architecture-with-a-custom.html"><span class="toc-current">Tutorial: Deploy Red Hat OpenShift on AWS Services (Classic Architecture) with a custom DNS resolver</span></a>
-</li>
-<li><a href="rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls_rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls.html">Tutorial: Update component routes with custom domains and TLS</a>
 </li>
 <li><a href="rosa-classic-sign-up-for-fedramp-access-to-create-a-red-hat-openshift-services-on-aws-cluster-in_rosa-classic-sign-up-for-fedramp-access-to-create-a-red-hat-openshift-services-on-aws-cluster-in.html">Sign up for FedRAMP access to create a Red Hat OpenShift Services on AWS cluster in GovCloud</a>
 </li>
@@ -669,14 +622,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="rosa-fedramp-overview_rosa-classic-apply-fedramp-rev5-secure-configuration-guidance.html">Learn about FedRAMP Rev5 Secure Configuration Guidance (SCG) requirements</a>
 </li>
 <li><a href="rosa-cluster-manager-overview_rosa-classic-red-hat-openshift-cluster-manager-overview.html">Red Hat OpenShift Cluster Manager</a>
-</li>
-<li><a href="rosa-classic-tutorial-protect-your-workloads-with-aws-waf-and-cloudfront_rosa-classic-tutorial-protect-your-workloads-with-aws-waf-and-cloudfront.html">Tutorial: Protect your workloads with AWS WAF and CloudFront</a>
-</li>
-<li><a href="rosa-classic-tutorial-protect-your-workloads-with-aws-waf-and-albs_rosa-classic-tutorial-protect-your-workloads-with-aws-waf-and-albs.html">Tutorial: Protect your workloads with AWS WAF and ALBs</a>
-</li>
-<li><a href="rosa-classic-tutorial-use-aws-secrets-manager-csi-for-your-application_rosa-classic-tutorial-use-aws-secrets-manager-csi-for-your-application.html">Tutorial: Use AWS Secrets Manager CSI for your application</a>
-</li>
-<li><a href="rosa-classic-tutorial-assign-a-consistent-egress-ip-to-your-workloads_rosa-classic-tutorial-assign-a-consistent-egress-ip-to-your-workloads.html">Tutorial: Assign a consistent egress IP to your workloads</a>
 </li>
 </ul>
 </li>
@@ -734,434 +679,70 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
+<li><button class="toc-toggle" type="button" data-toc-key="_configure.html">▶</button><a href="_configure.html"><span class="toc-current">Configure</span></a>
+<ul class="sectlevel2">
+<li><a href="configure-private-connections-for-a-private-cluster_rosa-classic-configure-private-connections-for-a-private-cluster.html">Configure private connections for a private cluster</a>
+</li>
+<li><a href="rosa-classic-tutorial-configure-microsoft-entra-id-as-your-cluster-identity-provider_rosa-classic-tutorial-configure-microsoft-entra-id-as-your-cluster-identity-provider.html">Tutorial: Configure Microsoft Entra ID as your cluster identity provider</a>
+</li>
+<li><a href="rosa-classic-tutorial-deploy-with-a-custom-dns-resolver_rosa-classic-tutorial-deploy-with-a-custom-dns-resolver.html">Tutorial: Deploy Red Hat OpenShift on AWS Services (Classic Architecture) with a custom DNS resolver</a>
+</li>
+<li><a href="rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls_rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls.html">Tutorial: Update component routes with custom domains and TLS</a>
+</li>
+<li><a href="rosa-classic-tutorial-protect-your-workloads-with-aws-waf-and-cloudfront_rosa-classic-tutorial-protect-your-workloads-with-aws-waf-and-cloudfront.html">Tutorial: Protect your workloads with AWS WAF and CloudFront</a>
+</li>
+<li><a href="rosa-classic-tutorial-protect-your-workloads-with-aws-waf-and-albs_rosa-classic-tutorial-protect-your-workloads-with-aws-waf-and-albs.html">Tutorial: Protect your workloads with AWS WAF and ALBs</a>
+</li>
+<li><a href="rosa-classic-tutorial-use-aws-secrets-manager-csi-for-your-application_rosa-classic-tutorial-use-aws-secrets-manager-csi-for-your-application.html">Tutorial: Use AWS Secrets Manager CSI for your application</a>
+</li>
+<li><a href="rosa-classic-tutorial-assign-a-consistent-egress-ip-to-your-workloads_rosa-classic-tutorial-assign-a-consistent-egress-ip-to-your-workloads.html">Tutorial: Assign a consistent egress IP to your workloads</a>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#cloud-experts-custom-dns-resolver-environment-setup_rosa-classic-tutorial-deploy-red-hat-openshift-on-aws-services-classic-architecture-with-a-custom">Set up your environment</a></li><li class="level-4"><a href="#cloud-experts-custom-dns-resolver-create-inbound-resolver_rosa-classic-tutorial-deploy-red-hat-openshift-on-aws-services-classic-architecture-with-a-custom">Create an Amazon Route 53 Inbound Resolver</a></li><li class="level-4"><a href="#cloud-experts-custom-dns-resolver-configure-dns-server-hcp_rosa-classic-tutorial-deploy-red-hat-openshift-on-aws-services-classic-architecture-with-a-custom">Configure your DNS server</a></li><li class="level-4"><a href="#cloud-experts-custom-dns-resolver-configure-dns-server-classic_rosa-classic-tutorial-deploy-red-hat-openshift-on-aws-services-classic-architecture-with-a-custom">Configure your DNS server</a></li></ul></aside>
 <div id="content">
-<div class="sect2">
-<h3 id="rosa-classic-tutorial-deploy-red-hat-openshift-on-aws-services-classic-architecture-with-a-custom_rosa-classic-tutorial-deploy-red-hat-openshift-on-aws-services-classic-architecture-with-a-custom">Tutorial: Deploy Red Hat OpenShift on AWS Services (Classic Architecture) with a custom DNS resolver</h3>
-<div class="paragraph _abstract">
-<p>Use a custom Dynamic Host Configuration Protocol (DHCP) option set to customize your Virtual Private Cloud (VPC) with your own Domain Name System (DNS) server, domain name, and more. Red&#160;Hat OpenShift Services on AWS (classic architecture) clusters support using custom DHCP option sets.</p>
-</div>
-<div class="sect3">
-<h4 id="cloud-experts-custom-dns-resolver-environment-setup_rosa-classic-tutorial-deploy-red-hat-openshift-on-aws-services-classic-architecture-with-a-custom">Set up your environment</h4>
-<div class="paragraph _abstract">
-<p>You can use environment variables to ensure consistency across the commands within this lab.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have access to the ROSA command-line interface (CLI) (<code>rosa</code>).</p>
-</li>
-<li>
-<p>You have access to the AWS CLI (<code>aws</code>).</p>
-</li>
-<li>
-<p>You have manually created an AWS Virtual Private Cloud (VPC).</p>
-</li>
-<li>
-<p>You have configured a DHCP option set to point to a custom DNS server and set as the default for your VPC.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>In your terminal, configure the following environment variables:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ export VPC_ID=&lt;vpc_ID&gt;
-$ export REGION=&lt;region&gt;
-$ export VPC_CIDR=&lt;vpc_CIDR&gt;</code></pre>
-</div>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;vpc_ID&gt;</code></dt>
-<dd>
-<p>Replace with the ID of the VPC you want to install your cluster into.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;region&gt;</code></dt>
-<dd>
-<p>Replace with the AWS region you want to install your cluster into.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;vpc_CIDR&gt;</code></dt>
-<dd>
-<p>Replace with the CIDR range of your VPC.</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-</li>
-<li>
-<p>Ensure all fields output correctly before moving to the next section:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ echo "VPC ID: ${VPC_ID}, VPC CIDR Range: ${VPC_CIDR}, Region: ${REGION}"</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="cloud-experts-custom-dns-resolver-create-inbound-resolver_rosa-classic-tutorial-deploy-red-hat-openshift-on-aws-services-classic-architecture-with-a-custom">Create an Amazon Route 53 Inbound Resolver</h4>
-<div class="paragraph _abstract">
-<p>Deploy an Amazon Route 53 Inbound Resolver in the Virtual Private Cloud (VPC) where you plan to deploy the cluster. With the inbound resolver, your DNS server can forward queries to Route 53.</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Warning">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>In this example, the <a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver.html">Amazon Route 53 Inbound Resolver</a> is deployed into the same VPC the cluster uses. If you want to deploy it into a separate VPC, you must manually associate the private hosted zone(s) <strong>once cluster creation is started</strong>. You cannot associate the zone before the cluster creation process begins. Failure to associate the private hosted zone during the cluster creation process will result in cluster creation failures.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Create a security group and allow access to ports <code>53/tcp</code> and <code>53/udp</code> from the VPC:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ SG_ID=$(aws ec2 create-security-group --group-name rosa-inbound-resolver --description "Security group for ROSA inbound resolver" --vpc-id ${VPC_ID} --region ${REGION} --output text)
-$ aws ec2 authorize-security-group-ingress --group-id ${SG_ID} --protocol tcp --port 53 --cidr ${VPC_CIDR} --region ${REGION}
-$ aws ec2 authorize-security-group-ingress --group-id ${SG_ID} --protocol udp --port 53 --cidr ${VPC_CIDR} --region ${REGION}</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create an Amazon Route 53 Inbound Resolver in your VPC:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ RESOLVER_ID=$(aws route53resolver create-resolver-endpoint \
-  --name rosa-inbound-resolver \
-  --creator-request-id rosa-$(date '+%Y-%m-%d') \
-  --security-group-ids ${SG_ID} \
-  --direction INBOUND \
-  --ip-addresses $(aws ec2 describe-subnets --filter Name=vpc-id,Values=${VPC_ID} --region ${REGION} | jq -jr '.Subnets | map("SubnetId=\(.SubnetId) ") | .[]') \
-  --region ${REGION} \
-  --output text \
-  --query 'ResolverEndpoint.Id')</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The above command attaches Amazon Route 53 Inbound Resolver endpoints to <em>all subnets</em> in the provided VPC using dynamically allocated IP addresses. If you prefer to manually specify the subnets, the IP addresses, or both, run the following command instead:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ RESOLVER_ID=$(aws route53resolver create-resolver-endpoint \
-  --name rosa-inbound-resolver \
-  --creator-request-id rosa-$(date '+%Y-%m-%d') \
-  --security-group-ids ${SG_ID} \
-  --direction INBOUND \
-  --ip-addresses SubnetId=&lt;subnet_ID&gt;,Ip=&lt;endpoint_IP&gt; SubnetId=&lt;subnet_ID&gt;,Ip=&lt;endpoint_IP&gt; \
-  --region ${REGION} \
-  --output text \
-  --query 'ResolverEndpoint.Id')</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>+
-where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;subnet_ID&gt;</code></dt>
-<dd>
-<p>Specifies the subnet ID you want inbound resolver endpoints added to.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;endpoint_IP&gt;</code></dt>
-<dd>
-<p>Specifies the static IP addresses you want inbound resolver endpoints added to.</p>
-</dd>
-</dl>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>Get the IP addresses of your inbound resolver endpoints to configure in your DNS server configuration:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ aws route53resolver list-resolver-endpoint-ip-addresses \
-  --resolver-endpoint-id ${RESOLVER_ID} \
-  --region=${REGION} \
-  --query 'IpAddresses[*].Ip'</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">[
-    "10.0.45.253",
-    "10.0.23.131",
-    "10.0.148.159"
-]</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="cloud-experts-custom-dns-resolver-configure-dns-server-hcp_rosa-classic-tutorial-deploy-red-hat-openshift-on-aws-services-classic-architecture-with-a-custom">Configure your DNS server</h4>
-<div class="paragraph _abstract">
-<p>Configure your Domain Name System (DNS) server to forward the private hosted zones to your Amazon Route 53 Inbound Resolver so the Red&#160;Hat OpenShift Services on AWS (classic architecture) cluster can resolve internal DNS names after creation.</p>
-</div>
-<div class="paragraph">
-<p>The following private hosted zones must be forwarded:</p>
-</div>
+<div class="sect1">
+<h2 id="_configure">Configure</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><code>&lt;cluster-name&gt;.hypershift.local</code></p>
+<p><a href="configure-private-connections-for-a-private-cluster_rosa-classic-configure-private-connections-for-a-private-cluster.html">Configure private connections for a private cluster</a></p>
 </li>
 <li>
-<p><code>rosa.&lt;domain-prefix&gt;.&lt;unique-ID&gt;.p3.openshiftapps.com</code></p>
+<p><a href="rosa-classic-tutorial-configure-microsoft-entra-id-as-your-cluster-identity-provider_rosa-classic-tutorial-configure-microsoft-entra-id-as-your-cluster-identity-provider.html">Tutorial: Configure Microsoft Entra ID as your cluster identity provider</a></p>
+</li>
+<li>
+<p><a href="rosa-classic-tutorial-deploy-with-a-custom-dns-resolver_rosa-classic-tutorial-deploy-with-a-custom-dns-resolver.html">Tutorial: Deploy Red Hat OpenShift on AWS Services (Classic Architecture) with a custom DNS resolver</a></p>
+</li>
+<li>
+<p><a href="rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls_rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls.html">Tutorial: Update component routes with custom domains and TLS</a></p>
+</li>
+<li>
+<p><a href="rosa-classic-tutorial-protect-your-workloads-with-aws-waf-and-cloudfront_rosa-classic-tutorial-protect-your-workloads-with-aws-waf-and-cloudfront.html">Tutorial: Protect your workloads with AWS WAF and CloudFront</a></p>
+</li>
+<li>
+<p><a href="rosa-classic-tutorial-protect-your-workloads-with-aws-waf-and-albs_rosa-classic-tutorial-protect-your-workloads-with-aws-waf-and-albs.html">Tutorial: Protect your workloads with AWS WAF and ALBs</a></p>
+</li>
+<li>
+<p><a href="rosa-classic-tutorial-use-aws-secrets-manager-csi-for-your-application_rosa-classic-tutorial-use-aws-secrets-manager-csi-for-your-application.html">Tutorial: Use AWS Secrets Manager CSI for your application</a></p>
+</li>
+<li>
+<p><a href="rosa-classic-tutorial-assign-a-consistent-egress-ip-to-your-workloads_rosa-classic-tutorial-assign-a-consistent-egress-ip-to-your-workloads.html">Tutorial: Assign a consistent egress IP to your workloads</a></p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>These Amazon Route 53 private hosted zones are created during cluster creation. The <code>cluster-name</code> and <code>domain-prefix</code> are customer-specified values, but the <code>unique-ID</code> is randomly generated during cluster creation and cannot be preselected. As such, you must wait for the cluster creation process to begin before configuring forwarding for the <code>p3.openshiftapps.com</code> private hosted zone.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Before the cluster is created, configure your DNS server to forward all DNS requests for <code>&lt;cluster-name&gt;.hypershift.local</code> to your Amazon Route 53 Inbound Resolver endpoints.</p>
-<div class="paragraph">
-<p>If you use a BIND DNS server, add a new zone to the <code>/etc/named.conf</code> file using the following example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">zone "&lt;cluster-name&gt;.hypershift.local" {
-  type forward;
-  forward only;
-  forwarders {
-    10.0.45.253;
-    10.0.23.131;
-    10.0.148.159;
-  };
-};</code></pre>
-</div>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Replace <code>&lt;cluster-name&gt;</code> with your Red&#160;Hat OpenShift Services on AWS (classic architecture) cluster name.</p>
-</li>
-<li>
-<p>Replace with the IP addresses of your inbound resolver endpoints collected above, ensuring that following each IP address there is a <code>;</code>.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</li>
-<li>
-<p>Create your cluster.</p>
-</li>
-<li>
-<p>After your cluster has begun the creation process, locate the newly created private hosted zone:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ aws route53 list-hosted-zones-by-vpc \
-  --vpc-id ${VPC_ID} \
-  --vpc-region ${REGION} \
-  --query 'HostedZoneSummaries[*].Name' \
-  --output table</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">--------------------------------------------------
-|             ListHostedZonesByVPC               |
-+------------------------------------------------+
-|  rosa.domain-prefix.lkmb.p3.openshiftapps.com. |
-|  cluster-name.hypershift.local.                |
-+------------------------------------------------+</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>It may take a few minutes for the cluster creation process to create the private hosted zones in Route 53. If you do not see a <code>p3.openshiftapps.com</code> domain, wait a few minutes and run the command again.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>When you know the unique ID of the cluster domain, configure your DNS server to forward all DNS requests for <code>rosa.&lt;domain-prefix&gt;.&lt;unique-ID&gt;.p3.openshiftapps.com</code> to your Amazon Route 53 Inbound Resolver endpoints. If you use a BIND DNS server, add a new zone to the <code>/etc/named.conf</code> file using the following example:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">zone "rosa.&lt;domain-prefix&gt;.&lt;unique-ID&gt;.p3.openshiftapps.com" {
-  type forward;
-  forward only;
-  forwarders {
-    10.0.45.253;
-    10.0.23.131;
-    10.0.148.159;
-  };
-};</code></pre>
-</div>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Replace <code>&lt;domain-prefix&gt;</code> with your cluster domain prefix and <code>&lt;unique-ID&gt;</code> with your unique ID collected above.</p>
-</li>
-<li>
-<p>Replace with the IP addresses of your inbound resolver endpoints collected above, ensuring that following each IP address there is a <code>;</code>.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="cloud-experts-custom-dns-resolver-configure-dns-server-classic_rosa-classic-tutorial-deploy-red-hat-openshift-on-aws-services-classic-architecture-with-a-custom">Configure your DNS server</h4>
-<div class="paragraph _abstract">
-<p>Configure your Domain Name System (DNS) server to forward the private hosted zone to your Amazon Route 53 Inbound Resolver so the Red&#160;Hat OpenShift Services on AWS (classic architecture) cluster can resolve internal DNS names after creation.</p>
-</div>
-<div class="paragraph">
-<p>The following private hosted zone must be forwarded:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>&lt;domain-prefix&gt;.&lt;unique-ID&gt;.p1.openshiftapps.com</code></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>This Amazon Route 53 private hosted zone is created during cluster creation. The <code>domain-prefix</code> is a customer-specified value, but the <code>unique-ID</code> is randomly generated during cluster creation and cannot be preselected. As such, you must wait for the cluster creation process to begin before configuring forwarding for the <code>p1.openshiftapps.com</code> private hosted zone.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Create your cluster.</p>
-</li>
-<li>
-<p>After your cluster has begun the creation process, locate the newly created private hosted zone:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ aws route53 list-hosted-zones-by-vpc \
-  --vpc-id ${VPC_ID} \
-  --vpc-region ${REGION} \
-  --query 'HostedZoneSummaries[*].Name' \
-  --output table</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">----------------------------------------------
-|           ListHostedZonesByVPC             |
-+--------------------------------------------+
-|  domain-prefix.agls.p3.openshiftapps.com.  |
-+--------------------------------------------+</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>It may take a few minutes for the cluster creation process to create the private hosted zones in Route 53. If you do not see a <code>p1.openshiftapps.com</code> domain, wait a few minutes and run the command again.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>When you know the unique ID of the cluster domain, configure your DNS server to forward all DNS requests for <code>&lt;domain-prefix&gt;.&lt;unique-ID&gt;.p1.openshiftapps.com</code> to your Amazon Route 53 Inbound Resolver endpoints.</p>
-<div class="paragraph">
-<p>If you use a BIND DNS server, add a new zone to the <code>/etc/named.conf</code> file using the following example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">zone "&lt;domain-prefix&gt;.&lt;unique-ID&gt;.p1.openshiftapps.com" {
-  type forward;
-  forward only;
-  forwarders {
-    10.0.45.253;
-    10.0.23.131;
-    10.0.148.159;
-  };
-};</code></pre>
-</div>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Replace <code>&lt;domain-prefix&gt;</code> with your cluster domain prefix and <code>&lt;unique-ID&gt;</code> with your unique ID collected above.</p>
-</li>
-<li>
-<p>Replace with the IP addresses of your inbound resolver endpoints collected above, ensuring that following each IP address there is a <code>;</code>.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</li>
-</ol>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="rosa-verify-permissions-sts-deployment-about-verification_rosa-classic-tutorial-verify-aws-permissions-before-an-sts-deployment.html">Permission verification for STS deployments</a> | ↑ Up: <a href="_get_started.html">Get Started</a> | ⌂ Home: <a href="navigation.html">Red&#160;Hat OpenShift Services on AWS (classic architecture)</a> | Next: <a href="rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls_rosa-classic-tutorial-update-component-routes-with-custom-domains-and-tls.html">Tutorial: Update component routes with custom domains and TLS</a> →</p>
+<p>← Previous: <a href="rosa-classic-troubleshoot-rosa-access-and-deployment-issues_rosa-classic-troubleshoot-rosa-access-and-deployment-issues.html">Troubleshoot ROSA access and deployment issues</a> | ↑ Up: <a href="navigation.html">Red&#160;Hat OpenShift Services on AWS (classic architecture)</a> | Next: <a href="configure-private-connections-for-a-private-cluster_rosa-classic-configure-private-connections-for-a-private-cluster.html">Configure private connections for a private cluster</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-07 09:56:20 +0100
+Last updated 2026-10-09 17:13:37 +0100
 </div>
 </div>
 </body>
